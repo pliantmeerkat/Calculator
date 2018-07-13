@@ -1,3 +1,5 @@
+require 'rubygems'
+# require 'fox16'
 
 class Calc 
 
@@ -35,4 +37,6 @@ class Calc
     def pretty_print
         return "the total for #{operations.join()} is #{total}"
     end
+
+
 end

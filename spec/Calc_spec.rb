@@ -1,7 +1,8 @@
 require './lib/Calc'
+require 'fox16'
 
 describe Calc do
-    x = 12; y = 15
+     x = 12; y = 15
     describe 'add' do
 
         it 'has the add method' do
@@ -13,7 +14,8 @@ describe Calc do
         end
         it 'can add more than two numbers correctly' do 
             input = []
-            5.times { |i| r = 1 + rand(50); input.push(r) }
+            5.times { |i| r = rand(50)
+            input.push(r) }
             expect(subject.add(input)).to eq(input.inject(:+))
             print subject.pretty_print
         end
@@ -58,7 +60,7 @@ describe Calc do
         it 'can print pretty total' do
             expect(subject).to respond_to(:pretty_print)
         end
-        #your total is 
+        
     end
     describe 'combined operations' do 
         it 'can add two numbers and multiply by another' do
@@ -67,4 +69,5 @@ describe Calc do
             expect(z).to eq((x + y) * 25)
         end
     end
+
 end
