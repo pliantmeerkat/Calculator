@@ -3,8 +3,19 @@
 require 'fox16'
 include Fox 
 
+class GUI < FXMainWindow # child of FXMainwindow
+
+    def initialize(app) # runs the application on opbject creation
+        main = FXMainWindow.new(app, "Calculator", :width => 300, :height => 400)
+    end
+
+    def create
+        super
+        show(PLACEMENT_SCREEN)
+    end
+end
+
 app = FXApp.new
-main = FXMainWindow.new(app, "U Wot M8", :width => 300, :height => 400)
-app.create 
-main.show(PLACEMENT_SCREEN)
+GUI.new(app)
+app.create
 app.run
