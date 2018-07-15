@@ -13,15 +13,15 @@ describe Calc do
     end
     it 'can add more than two numbers correctly' do
       input = []
-      5.times do |i| r = rand(50)
-        input.push(r) 
+      5.times do |_|
+        r = rand(50)
+        input.push(r)
       end
       expect(subject.add(input)).to eq(input.inject(:+))
       print subject.pretty_print
     end
   end
   describe 'subtract' do
-
     it 'has the subtract method' do
       expect(subject).to respond_to(:subtract)
     end
