@@ -18,8 +18,6 @@ class GUI < FXMainWindow
   end
 end
 
-
-
 app = FXApp.new
 main = FXMainWindow.new(app, "Calculator", :width => 300, :height => 400)
 GUI.new
