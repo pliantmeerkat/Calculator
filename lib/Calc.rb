@@ -1,5 +1,3 @@
-require 'rubygems'
-# require 'fox16'
 # calculator class
 class Calc
   attr_reader :total
@@ -11,7 +9,7 @@ class Calc
 
   def add(arr)
     @operations.push(arr.join(' + '))
-    @total = arr.inject(:+) 
+    @total = arr.inject(:+)
   end
 
   def subtract(arr)
@@ -30,10 +28,10 @@ class Calc
   end
 
   def print_total
-    puts @total; return @total
+    puts @total
   end
 
   def pretty_print
-    return "the total for #{operations.join()} is #{total}"
+    "the total for #{operations.join} is #{total}"
   end
 end
